@@ -1,0 +1,36 @@
+graph TD
+    INICIO((INICIO))
+    FIN((FIN))
+    INIT["Inicializar Inventario (Cargar datos si existen)"]
+    MENU[/Mostrar Menú Principal: A/M/B/U/E/S/G/C/Q\]
+    INPUT[/Obtener Opción del Usuario\]
+    VALID{¿Opción Válida?}
+    QUIT{"Opción = 'Q' (Salir)?"}
+    RETORNO((Retorno al Menú))
+    DISPATCH["Acciones CRUD, Guardar y Cargar"]
+
+    INICIO --> INIT
+    INIT --> MENU
+    MENU --> INPUT
+    
+    INPUT --> VALID
+    VALID -- No --> MENU
+
+    VALID -- Sí --> QUIT
+    
+    QUIT -- Sí --> FIN
+    
+    QUIT -- No --> DISPATCH
+    
+    DISPATCH --> RETORNO
+    RETORNO --> MENU
+
+    %% ((("A - Agregar Producto")
+    %%("M - Mostrar Inventario")
+    %%("B - Buscar Producto")
+    %%("U - Actualizar Producto")
+    %%("E - Eliminar Producto")
+    %%("S - Estadísticas")
+    %%("G - Guardar Inventario")
+    %%("C - Cargar Inventario")
+    %%("Q - Salir") %% 
