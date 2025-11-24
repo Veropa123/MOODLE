@@ -1,0 +1,6 @@
+id,name,brand,category,price,stock,warranty
+1,lap,Acer,Laptops,1500000.0,10,12
+2,Smart TV 50,Samsung,TV,400,15,24
+3,Bluetooth Headset,Sony,Audio,60,28,6
+4,Gaming Mouse,Logitech,Accessories,25,50,12
+6,Wireless charger,power go,Accesories,90000.0,40,12
